@@ -16,4 +16,3 @@ cache:
 
 script:
   - npm audit --production
-  - npm run sass

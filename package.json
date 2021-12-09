@@ -15,9 +15,7 @@
   "homepage": "https://github.com/julie-ng/tidy-jsdoc",
   "scripts": {
     "release": "standard-version --sign",
-    "sass": "gulp sass",
-    "sass:watch": "gulp sass:watch",
-    "preflight": "npm run sass & npm audit"
+    "preflight": "npm audit"
   },
   "dependencies": {
     "jsdoc": "^3.6.3",
@@ -26,8 +24,6 @@
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.0",
     "marked": "^0.7.0",
     "standard-version": "^9.2.0",
     "tar": " >=4.4.2"
