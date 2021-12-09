@@ -9,6 +9,9 @@
       <link type="text/css" rel="stylesheet" href="styles/vendor/prism-tomorrow-night.css">
     <?js } ?>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <?js if (env.conf.metadata.favicon) { ?>
+      <link type="image/x-icon" rel="icon" href="<?js= env.conf.metadata.favicon ?>">
+    <?js } ?>
     <?js if (env.conf.hasOwnProperty('styles')) { ?>
     <?js var styles = env.conf.styles; ?>
     <style>
