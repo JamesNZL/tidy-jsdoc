@@ -2,17 +2,21 @@
   "name": "tidy-jsdoc",
   "version": "1.4.0",
   "author": "Julie Ng <hello@julie.io>",
+  "author": "James Bao",
+  "contributors": [
+    "Julie Ng <hello@julie.io>"
+  ],
   "license": "Apache-2.0",
   "description": "A clean JSDoc3 template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julie-ng/tidy-jsdoc.git"
+    "url": "https://github.com/JamesNZL/tidy-jsdoc.git"
   },
   "keywords": [
     "jsdoc",
     "template"
   ],
-  "homepage": "https://github.com/julie-ng/tidy-jsdoc",
+  "homepage": "https://github.com/JamesNZL/tidy-jsdoc",
   "scripts": {
     "release": "standard-version --sign",
     "preflight": "npm audit"
