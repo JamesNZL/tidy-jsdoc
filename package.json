@@ -1,7 +1,6 @@
 {
   "name": "tidy-jsdoc",
-  "version": "1.4.0",
-  "author": "Julie Ng <hello@julie.io>",
+  "version": "1.5.0",
   "author": "James Bao",
   "contributors": [
     "Julie Ng <hello@julie.io>"
