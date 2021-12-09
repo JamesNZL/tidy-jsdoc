@@ -308,6 +308,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 		items.forEach(function(item) {
 			const methods = find({ kind: 'function', memberof: item.longname });
 			const members = find({ kind: 'member', memberof: item.longname });
+			const typedefs = find({ kind: 'typedef', memberof: item.longname });
 			const events = find({ kind: 'event', memberof: item.longname });
 			let displayName;
 
@@ -356,6 +357,15 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 							return;
 						}
 						nav.push(buildNavItem(buildNavType(method.kind, linkto(method.longname, method.name))));
+					});
+				}
+
+				if (typedefs.length) {
+					typedefs.forEach(function(typedef) {
+						if (typedef.inherited && conf.showInheritedInNav === false) {
+							return;
+						}
+						nav.push(buildNavItem(buildNavType(typedef.kind, linkto(typedef.longname, typedef.name))));
 					});
 				}
 
