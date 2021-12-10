@@ -294,6 +294,14 @@ function attachModuleSymbols(doclets, modules) {
 	});
 }
 
+/**
+ *
+ * @param {{longname: string, name: string, kind: string}[]} items
+ * @param {string} itemHeading Navigation section heading
+ * @param {Object} itemsSeen Items already processed?
+ * @param {function} linktoFn Function to parse the link to the item
+ * @returns
+ */
 function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 	const nav = [];
 	const conf = env.conf.templates || {};
