@@ -57,6 +57,9 @@ Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` 
 - **styles**  
 	Lets you customise colours, etc. See details below.
 
+- **menu**
+  Lets you implement custom navigation links at the top of the side bar. See details below.
+
 ```javascript
 {
   "tags": {
@@ -124,6 +127,38 @@ This would output in your document `<head>`:
 ```
 The keys and values are arbitrary, but the CSS should be valid. For a full list of the available variables, see [styles.css](./static/styles/styles.css).
 
+### Add Custom Navigation Sidebar Links
+
+Inside your `jsdoc.json` configuration file, add an addional `menu` property, for example:
+
+```javascript
+{
+  "metadata": "...",
+  "menu": [
+    {
+      "title": "GitHub Repository",		
+      "link": "https://github.com/JamesNZL/tidy-jsdoc",
+      "target": "_blank_"
+    }
+  ]
+}
+```
+
+This would output a link at the top of your navigation sidebar:
+
+```html
+<a href="https://github.com/JamesNZL/tidy-jsdoc" target="_blank">GitHub Repository</a>
+```
+
+The `menu` property must be of the following type:
+
+```javascript
+{
+  title: string,
+  link: string,
+  target: ?string
+}[]
+```
 
 ## Development
 
