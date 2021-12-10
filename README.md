@@ -57,8 +57,8 @@ Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` 
 - **styles**  
 	Lets you customise colours, etc. See details below.
 
-- **menu**
-  Lets you implement custom navigation links at the top of the side bar. See details below.
+- **menu**  
+	Lets you implement custom navigation links at the top of the side bar. See details below.
 
 ```javascript
 {
