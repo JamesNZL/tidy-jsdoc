@@ -410,6 +410,15 @@ function linktoExternal(longName, name) {
 }
 
 /**
+ * Create an HTML link for a custom defined link in jsdoc.json
+ * @param {{title: string, link: string, target: string}} link
+ * @returns {string} The HTML link in an anchor tag
+ */
+function linktoLink(link) {
+	return `<a href="${link.link}" target="${link.target}">${link.title}</a>`;
+}
+
+/**
  * Create the navigation sidebar.
  * @param {object} members The members that will be used to create the sidebar.
  * @param {array<object>} members.classes
@@ -430,6 +439,24 @@ function buildNav(members) {
 
 	// console.log('--- members ----');
 	// console.log(members.events);
+
+	// Add custom menu links from jsdoc.json
+	// env.conf.menu will be of type {title: string, link: string, target: string}[]
+	if (env.conf.menu.length) {
+		const customLinks = [];
+
+		customLinks.push(buildNavHeading('Links'));
+
+		env.conf.menu.forEach(function(link) {
+			if (!hasOwnProp.call(seen, link.title)) {
+				customLinks.push(buildNavItem(linktoLink(link)));
+			}
+
+			seen[link.title] = true;
+		});
+
+		nav = nav.concat('<ul>' + customLinks.join('') + '</ul>');
+	}
 
 	nav = nav.concat(buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial));
 	nav = nav.concat(buildMemberNav(members.classes, 'Classes', seen, linkto));
