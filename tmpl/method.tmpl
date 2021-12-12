@@ -86,9 +86,9 @@ var hasMethodSummary = (data.kind !== 'class')
     <ul>
     <?js data.returns.forEach(function(r) { ?>
         <li class="method-returns">
-            <?js r.type.names.forEach(function(t) { ?>
-                <code><?js= self.htmlsafe(t) ?></code>
-            <?js }); ?>
+            <?js if (r.type && r.type.names) {?>
+                <?js= self.partial('type.tmpl', r.type.names) ?>
+            <?js } ?>
             <?js if (r.description) { ?>
                 <?js= r.description ?>
             <?js }; ?>
