@@ -177,8 +177,6 @@ Inside your `jsdoc.json` configuration file, add an addional `repository` proper
 
 If `type` is specified, the link text will render as `View on ${type}`, e.g. 'View on Github'. If it is omitted or blank, it will render as 'View in Repository'.
 
-This would output a link at the top of your navigation sidebar:
-
 ## Development
 
 For more information about creating jsdoc templates, see the [jsdoc GitHub repository](https://github.com/jsdoc/jsdoc/tree/master/templates).
