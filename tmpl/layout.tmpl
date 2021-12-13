@@ -50,6 +50,22 @@
   <div class="container">
     <p class="page-kind"><?js= kind ?></p>
     <h1 class="page-title"><?js= title ?></h1>
+    <?js if (kind === 'source') { ?>
+      <?js if (env.conf.hasOwnProperty('repository')) { ?>
+          <?js const repository = env.conf.repository; ?>
+          <?js function addSlash(str) {
+            const endsWithSlash = /\/$/;
+            if (!endsWithSlash.test(str)) return str + '/';
+            return str;
+          } ?>
+          <?js function linktoRepository(link, branch, file) {
+            return `<a href="${link}blob/${branch}${file}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
+          } ?>
+          <?js if (repository.link && repository.branch) { ?>
+            <h3><?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), title) ?></h3>
+          <?js } ?>
+        <?js } ?>
+    <?js } ?>
     <?js= content ?>
   </div>
 </main>
