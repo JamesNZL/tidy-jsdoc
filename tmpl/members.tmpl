@@ -57,6 +57,21 @@ if (data.summary) {
     <ul>
         <li class="method-source">
             <?js= self.linkto(meta.shortpath) ?><?js= self.linkto(meta.shortpath, ', line ' + meta.lineno, null, 'source.' + meta.lineno) ?>
+            <?js if (env.conf.hasOwnProperty('repository')) { ?>
+                <?js const repository = env.conf.repository; ?>
+                <?js function addSlash(str) {
+                    const endsWithSlash = /\/$/;
+                    if (!endsWithSlash.test(str)) return str + '/';
+                    return str;
+                } ?>
+                <?js function linktoRepository(link, branch, file, line) {
+                    return `<a href="${link}blob/${branch}${file}#L${line}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
+                } ?>
+                <?js if (repository.link && repository.branch) { ?>
+                        &nbsp\\&nbsp
+                        <?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), meta.shortpath, meta.lineno) ?>
+                <?js } ?>
+            <?js } ?>
         </li>
     </ul>
 <?js } ?>
