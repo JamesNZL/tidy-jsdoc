@@ -159,8 +159,8 @@ var hasMethodSummary = (data.kind !== 'class')
                     return `<a href="${link}blob/${branch}${file}#L${line}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
                 } ?>
                 <?js if (repository.link && repository.branch) { ?>
-                        &nbsp//&nbsp
-                        <?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), meta.shortpath, meta.lineno) ?>
+                    &nbsp//&nbsp
+                    <?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), meta.shortpath, meta.lineno) ?>
                 <?js } ?>
             <?js } ?>
         </li>
