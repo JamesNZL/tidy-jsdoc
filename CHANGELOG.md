@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/JamesNZL/tidy-jsdoc/compare/v1.4.0...v1.6.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* a typo in readme ([0a5a935](https://github.com/JamesNZL/tidy-jsdoc/commit/0a5a93590d9419a0c3262a65ce18a5bdca38a2a5))
+
 ## [1.4.0](https://github.com/julie-ng/tidy-jsdoc/compare/v1.3.1...v1.4.0) (2020-03-25)
 
 
