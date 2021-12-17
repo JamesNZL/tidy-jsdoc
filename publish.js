@@ -368,7 +368,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 					});
 				}
 
-				if (typedefs.length) {
+				if (typedefs.length && env.conf.opts.showTypedefsInNav) {
 					typedefs.forEach(function(typedef) {
 						if (typedef.inherited && conf.showInheritedInNav === false) {
 							return;
