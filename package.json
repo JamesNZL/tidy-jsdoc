@@ -26,8 +26,6 @@
     "util": "^0.12.4"
   },
   "devDependencies": {
-    "marked": "^0.7.0",
-    "standard-version": "^9.2.0",
-    "tar": " >=4.4.2"
+    "standard-version": "^9.2.0"
   }
 }
