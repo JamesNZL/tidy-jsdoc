@@ -138,7 +138,7 @@ Inside your `jsdoc.json` configuration file, add an addional `menu` property, fo
     {
       "title": "GitHub Repository",		
       "link": "https://github.com/JamesNZL/tidy-jsdoc",
-      "target": "_blank_"
+      "target": "_blank"
     }
   ]
 }
