@@ -58,11 +58,12 @@
             if (!endsWithSlash.test(str)) return str + '/';
             return str;
           } ?>
-          <?js function linktoRepository(link, branch, file) {
-            return `<a href="${link}blob/${branch}${file}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
+          <?js function linktoRepository(link, branch, filepath) {
+            return `<a href="${link}blob/${branch}${filepath}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
           } ?>
           <?js if (repository.link && repository.branch) { ?>
-            <h3><?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), title) ?></h3>
+            <?js const filepath = env.sourceFiles.find(filepath => filepath.includes(obj.title.replace(/\//g, '\\'))).replace(env.pwd + '\\', ''); ?>
+            <h3><?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), filepath) ?></h3>
           <?js } ?>
         <?js } ?>
     <?js } ?>

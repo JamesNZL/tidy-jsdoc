@@ -64,12 +64,13 @@ if (data.summary) {
                     if (!endsWithSlash.test(str)) return str + '/';
                     return str;
                 } ?>
-                <?js function linktoRepository(link, branch, file, line) {
-                    return `<a href="${link}blob/${branch}${file}#L${line}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
+                <?js function linktoRepository(link, branch, filepath, line) {
+                    return `<a href="${link}blob/${branch}${filepath}#L${line}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
                 } ?>
                 <?js if (repository.link && repository.branch) { ?>
                     &nbsp//&nbsp
-                    <?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), meta.shortpath, meta.lineno) ?>
+                    <?js const filepath = meta.path.replace(env.pwd + '\\', '') ?>
+                    <?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), `${filepath}\\${meta.filename}`, meta.lineno) ?>
                 <?js } ?>
             <?js } ?>
         </li>
