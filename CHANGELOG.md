@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/JamesNZL/tidy-jsdoc/compare/v1.6.1...v1.7.0) (2021-12-17)
+
+
+### Features
+
+* **typedefs:** :triangular_flag_on_post: add opt to control display of typedefs in nav ([e0315c3](https://github.com/JamesNZL/tidy-jsdoc/commit/e0315c3792da2a3f77cb0f7315dddc60849ab15f))
+
+
+### Bug Fixes
+
+* :bug: fix links to files in nested source folders ([e77329a](https://github.com/JamesNZL/tidy-jsdoc/commit/e77329a33c400c879a623cd4ee4b5504f1ae8be2))
+* **readme:** :pencil2: fix _blank_ typo ([e84fa62](https://github.com/JamesNZL/tidy-jsdoc/commit/e84fa622bca3ded43aba3e3879e70d3bb88bb5c2))
+
 ### [1.6.1](https://github.com/JamesNZL/tidy-jsdoc/compare/v1.4.0...v1.6.1) (2021-12-14)
 
 
