@@ -60,6 +60,9 @@ Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` 
 - **menu**  
 	Lets you implement custom navigation links at the top of the side bar. See details below.
 
+- **repository**  
+	Lets you add links to your source files in your Git repositories. See details below.
+
 ```javascript
 {
   "tags": {
@@ -93,6 +96,18 @@ Then configure jsdoc to use the tidy template. Below is an example `jsdoc.json` 
   },
   "metadata": {
     "title": "My JavaScript Library",
+  },
+  "menu": [
+    {
+      "title": "GitHub Repository",		
+      "link": "https://github.com/JamesNZL/tidy-jsdoc",
+      "target": "_blank"
+    }
+  ],
+  "repository": {
+      "link": "https://github.com/JamesNZL/tidy-jsdoc",
+      "branch": "main",
+      "type": "GitHub"
   }
 }
 ```
