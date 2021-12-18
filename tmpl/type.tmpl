@@ -5,5 +5,5 @@
 
 <?js data.forEach(function(name, i) { ?>
     <span class="param-type"><code><?js= self.linkto(name, self.htmlsafe(name)) ?></code></span>
-    <?js if (i < data.length-1) { ?>&nbsp|&nbsp<?js } ?>
+    <?js if (i < data.length-1) { ?>&nbsp;|&nbsp;<?js } ?>
 <?js }); ?>

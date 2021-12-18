@@ -68,7 +68,7 @@ if (data.summary) {
                     return `<a href="${link}blob/${branch}${filepath}#L${line}" target="_blank">View ${(repository.type) ? `on ${repository.type}` : `in Repository`}</a>`;
                 } ?>
                 <?js if (repository.link && repository.branch) { ?>
-                    &nbsp//&nbsp
+                    &nbsp;//&nbsp;
                     <?js const filepath = meta.path.replace(env.pwd + '\\', '') ?>
                     <?js= linktoRepository(addSlash(repository.link), addSlash(repository.branch), `${filepath}\\${meta.filename}`, meta.lineno) ?>
                 <?js } ?>
