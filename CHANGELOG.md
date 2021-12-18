@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.2](https://github.com/JamesNZL/tidy-jsdoc/compare/v1.7.1...v1.7.2) (2021-12-18)
+
+
+### Bug Fixes
+
+* **param-attributes:** :lipstick: display all attributes on same line ([95bbfff](https://github.com/JamesNZL/tidy-jsdoc/commit/95bbffff827521d903f3e46cd529014b91ef9a07))
+
 ### [1.7.1](https://github.com/JamesNZL/tidy-jsdoc/compare/v1.7.0...v1.7.1) (2021-12-17)
 
 ## [1.7.0](https://github.com/JamesNZL/tidy-jsdoc/compare/v1.6.1...v1.7.0) (2021-12-17)
