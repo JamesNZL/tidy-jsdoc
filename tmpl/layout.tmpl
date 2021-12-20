@@ -16,10 +16,7 @@
     <?js var styles = env.conf.styles; ?>
     <style>
       :root {
-      <?js for (var key in styles) { ?>
-      <?js if (styles.hasOwnProperty(key)) { ?>
-        --<?js= key + ': ' + styles[key] ?>;
-      <?js } } ?>
+        <?js= Object.keys(styles).map(key => `--${key}: ${styles[key]};`).join('\n') ?>
       }
     </style>
     <?js } ?>
