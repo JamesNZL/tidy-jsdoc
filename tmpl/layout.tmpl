@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title><?js= (title) ? title : (kind === '') ? 'Home' : '' ?> | <?js= env.conf.metadata.title ?></title>
-    <?js if (env.conf.opts.hasOwnProperty('prism-theme')) { ?>
-      <link type="text/css" rel="stylesheet" href="styles/vendor/<?js= env.conf.opts['prism-theme'] ?>.css">
-    <?js } else { ?>
-      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-tomorrow-night.css">
-    <?js } ?>
-    <link type="text/css" rel="stylesheet" href="styles/styles.css">
-    <?js if (env.conf.metadata.favicon) { ?>
-      <link type="image/x-icon" rel="icon" href="<?js= env.conf.metadata.favicon ?>">
-    <?js } ?>
-    <?js if (env.conf.hasOwnProperty('styles')) { ?>
-    <?js var styles = env.conf.styles; ?>
-    <style>
-      :root {
-        <?js= Object.keys(styles).map(key => `--${key}: ${styles[key]};`).join('\n') ?>
-      }
-    </style>
-    <?js } ?>
+  <meta charset="utf-8">
+  <title><?js= (title) ? title : (kind === '') ? 'Home' : '' ?> | <?js= env.conf.metadata.title ?></title>
+  <?js if (env.conf.opts.hasOwnProperty('prism-theme')) { ?>
+    <link type="text/css" rel="stylesheet" href="styles/vendor/<?js= env.conf.opts['prism-theme'] ?>.css">
+  <?js } else { ?>
+    <link type="text/css" rel="stylesheet" href="styles/vendor/prism-tomorrow-night.css">
+  <?js } ?>
+  <link type="text/css" rel="stylesheet" href="styles/styles.css">
+  <?js if (env.conf.metadata.favicon) { ?>
+    <link type="image/x-icon" rel="icon" href="<?js= env.conf.metadata.favicon ?>">
+  <?js } ?>
+  <?js if (env.conf.hasOwnProperty('styles')) { ?>
+  <?js var styles = env.conf.styles; ?>
+  <style>
+    :root {
+      <?js= Object.keys(styles).map(key => `--${key}: ${styles[key]};`).join('\n      ') ?>
+    }
+  </style>
+  <?js } ?>
 </head>
 <body>
 
