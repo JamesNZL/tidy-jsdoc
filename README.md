@@ -13,7 +13,7 @@ Forked from [tidy-jsdoc](https://github.com/julie-ng/tidy-jsdoc).
 
 #### Examples
 
-- [Pronto](https://jamesnzl.github.io/Pronto)
+- [Pronto](https://aucklandarmycadets.github.io/Pronto)
 - [Newton Graph Library](https://julie-ng.github.io/newtonjs-graph/)
 
 <img src="./images/v1-preview-newtonjs.png" alt="Version 1.0 - Preview" style="max-width:100%;">
