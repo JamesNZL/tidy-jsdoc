@@ -21,7 +21,7 @@
     "preflight": "npm audit"
   },
   "dependencies": {
-    "jsdoc": "^3.6.3",
+    "jsdoc": "^4.0.0",
     "taffydb": "^2.7.3",
     "util": "^0.12.4"
   },
